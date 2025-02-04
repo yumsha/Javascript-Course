@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="desert_eagle.tembak()">Fire</button>
+    <button onclick="desert_eagle.reloadAmmo()">Reload</button>
+    <p id="ammo-count">Ammo: 0</p>
+
+    <script>
+        const desert_eagle = {
+            weight: "3.9lb",
+            ammo: 0,    
+            reloadAmmo: () => { desert_eagle.ammo = 7; renderAmmo(); },
+            tembak: () => { if (desert_eagle.ammo > 0) { desert_eagle.ammo--; } renderAmmo(); }
+        };
+
+        const renderAmmo = () => {
+            document.getElementById('ammo-count').innerText = `Ammo: ${desert_eagle.ammo}`;
+        }
+
+        console.log(desert_eagle);  
+        
+    </script>
+</body>
+</html>

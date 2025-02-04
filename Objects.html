@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handphone</title>
+</head>
+<body>
+    <h1>JS Objects</h1>
+    <h1>Membuat Object</h1>
+    <button id="cekhp" onclick="cariHp()">Cek Device Kamu!</button>
+    <p id="testhp" style="display: none;"></p>
+
+    <script>
+        let cekHp = document.getElementById('cekhp');
+        let testHp = document.getElementById('testhp');
+
+        // munculin object testhp
+        function cariHp() {
+            testHp.style.display = 'block';
+        }
+
+        // membuat object testhp
+        const testhp = {tipe: 'Handphone', merek: 'iPhone', harga: 10000000};
+
+        // memuat object yang sudah disimpan di dalam variabel testhp
+        document.getElementById('testhp').innerHTML = "Handpohone kamu adalah:" +testhp.merek+ " <br> harganya : " +testhp.harga;
+    </script>
+</body>
+</html>  
